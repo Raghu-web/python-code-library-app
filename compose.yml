@@ -1,35 +1,35 @@
 ---
 services:
   db:
-    image: dbimage
+    image: raghuram0024/pythonapp:dbimage
     ports:
       - "3306:3306"
     deploy:
       replicas: 3
 
   auth_service:
-    image: authimage
+    image: raghuram0024/pythonapp:authimage
     ports:
       - "5001:5001"
     deploy:
       replicas: 3
 
   book_service:
-    image: bookimage
+    image: raghuram0024/pythonapp:bookimage
     ports:
       - "5002:5002"
     deploy:
       replicas: 3
 
   borrow_service:
-    image: borrowimage
+    image: raghuram0024/pythonapp:borrowimage
     ports:
       - "5003:5003"
     deploy:
       replicas: 3
 
   frontend:
-    image: appimage
+    image: raghuram0024/pythonapp:appimage
     ports:
       - "5000:5000"
     deploy:
